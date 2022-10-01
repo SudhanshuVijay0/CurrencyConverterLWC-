@@ -1,15 +1,15 @@
 public class currencyConverterController 
 {
-	@AuraEnabled()
+	@AuraEnabled(cacheable=true)//missing cacheable as to save runtime its required
     public static double getConversion(String amount, String convertFrom, String convertTo)
     {
         
         Http http = new Http();
-        HttpRequest req = new HttpRequest()
+        HttpRequest req = new HttpRequest();//missing semicolon
         String endpoint = 'https://api.exchangerate.host/convert?from='+convertFrom + '&to=' + convertTo + '&amount='+amount;
         req.setEndpoint(endpoint);
         req.setMethod('GET');
-        HttpResponse res = http.send(req)
+        HttpResponse res = http.send(req); //missing semicolon
         map<String, Object> responseMap = new map<String, Object>();
         if(res.getStatusCode() != 200) 
         {
