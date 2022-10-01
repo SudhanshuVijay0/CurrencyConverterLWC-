@@ -1,0 +1,12 @@
+.dummy{
+	color : black;
+}
+
+.icon-color
+{
+	--lwc-colorTextIconDefault: green;
+}
+.arrow-color
+{
+	--lwc-colorTextIconDefault: grey;
+}
