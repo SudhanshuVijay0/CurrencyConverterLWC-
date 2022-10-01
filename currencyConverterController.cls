@@ -1,15 +1,15 @@
 public class currencyConverterController 
 {
-	@AuraEnabled(cacheable=true)
+	@AuraEnabled()
     public static double getConversion(String amount, String convertFrom, String convertTo)
     {
         
         Http http = new Http();
-        HttpRequest req = new HttpRequest();
+        HttpRequest req = new HttpRequest()
         String endpoint = 'https://api.exchangerate.host/convert?from='+convertFrom + '&to=' + convertTo + '&amount='+amount;
         req.setEndpoint(endpoint);
         req.setMethod('GET');
-        HttpResponse res = http.send(req);
+        HttpResponse res = http.send(req)
         map<String, Object> responseMap = new map<String, Object>();
         if(res.getStatusCode() != 200) 
         {
