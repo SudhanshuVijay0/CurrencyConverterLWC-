@@ -52,7 +52,7 @@ export default class CurrencyConverter extends LightningElement
         console.log(event.target.value)
         this.convertFrom = event.target.value;
     }
-
+    //cpturing input fields
     handleToChange(event)
     {
         console.log(event.target.value)
