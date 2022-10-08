@@ -76,5 +76,6 @@ export default class CurrencyConverter extends LightningElement
     handleChange(event)
     {
         this.value = event.target.value;
+        console.log(this.value); // checking if the value is getting updated or not
     }
 }
