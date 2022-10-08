@@ -36,6 +36,8 @@ export default class CurrencyConverter extends LightningElement
         console.error('Error:', error);
       }
     }
+    
+    //getting conversions from apex
     handleClick()
     {
         getconversion({amount:this.amount,convertFrom: this.convertFrom, convertTo: this.convertTo})
