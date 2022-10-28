@@ -25,7 +25,7 @@ public class currencyConverterController
     }
     
     @AuraEnabled(cacheable=true)
-    public static <String, Object> getCodes()
+    public static map<String, Object> getCodes()
     {
         
         Http http = new Http();
