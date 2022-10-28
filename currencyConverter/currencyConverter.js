@@ -1,9 +1,9 @@
-import { LightningElement, track, wire } from 'lwc';
+import { LightningElement, track } from 'lwc';
 import getconversion from '@salesforce/apex/currencyConverterController.getConversion';
 import getCodes from '@salesforce/apex/currencyConverterController.getCodes';
 export default class CurrencyConverter extends LightningElement 
 {
-    @track convertFrom='';
+    track convertFrom='';
     @track convertTo='';
     @track amount='';
     @track result='';
@@ -38,7 +38,7 @@ export default class CurrencyConverter extends LightningElement
     }
     
     //getting conversions from apex
-    handleClick()
+    handleClick
     {
         getconversion({amount:this.amount,convertFrom: this.convertFrom, convertTo: this.convertTo})
         .then((res) => {
@@ -64,7 +64,7 @@ export default class CurrencyConverter extends LightningElement
     handleAmountChange(event)
     {
         console.log(event.target.value)
-        this.amount = event.target.value;
+        amount = event.target.value;
     }
 
     handleClear()
