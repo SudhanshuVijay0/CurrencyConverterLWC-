@@ -40,7 +40,7 @@ public class currencyConverterController
         }
         else
         {
-            responseMap = (map<String, Object>) JSON.deserializeUntyped(res.getBody())
+            responseMap = (map<String, Object>) JSON.deserializeUntyped(res.getBody());
         }
         map<String, Object> symbolMap = (map<String, Object>)(responseMap.get('symbols'));
         System.debug('symbolMap--> '+symbolMap);	
