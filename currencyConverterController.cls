@@ -29,7 +29,7 @@ public class currencyConverterController
     {
         
         Http http = new Http();
-        HttpRequest req =  HttpRequest();
+        HttpRequest req = new HttpRequest();
         req.setEndpoint('https://api.exchangerate.host/symbols');
         req.setMethod('GET');
         HttpResponse res = http.send(req);
