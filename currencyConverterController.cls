@@ -21,7 +21,7 @@ public class currencyConverterController
             responseMap = (map<String, Object>) JSON.deserializeUntyped(res.getBody());
             System.debug('result--> '+responseMap.get('result'));
         }
-        return (Double)responseMap.('result');
+        return (Double)responseMap.get('result');
     }
     
     @AuraEnabled(cacheable=true)
