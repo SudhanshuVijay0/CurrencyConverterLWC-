@@ -8,7 +8,7 @@ public class currencyConverterController
         HttpRequest req = new HttpRequest();//missing semicolon
         String endpoint = 'https://api.exchangerate.host/convert?from='+convertFrom + '&to=' + convertTo + '&amount='+amount;
         req.setEndpoint(endpoint);
-        setMethod('GET');
+        req.setMethod('GET');
         HttpResponse res = http.send(req); //missing semicolon
         map<String, Object> responseMap = new map<String, Object>();
         if(res.getStatusCode() != 200) 
