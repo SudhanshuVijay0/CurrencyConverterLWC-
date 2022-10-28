@@ -4,7 +4,7 @@ public class currencyConverterController
     public static double getConversion(String amount, String convertFrom, String convertTo)
     {
         
-        Http http = new Http()
+        Http http = new Http();
         HttpRequest req = new HttpRequest();//missing semicolon
         String endpoint = 'https://api.exchangerate.host/convert?from='+convertFrom + '&to=' + convertTo + '&amount='+amount;
         req.setEndpoint(endpoint);
