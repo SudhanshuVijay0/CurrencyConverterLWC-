@@ -64,7 +64,7 @@ export default class CurrencyConverter extends LightningElement
     handleAmountChange(event)
     {
         console.log(event.target.value)
-        amount = event.target.value;
+        this.amount = event.target.value;
     }
 
     handleClear()
