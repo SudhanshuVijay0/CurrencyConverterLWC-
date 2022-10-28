@@ -21,7 +21,7 @@ public class currencyConverterController
             responseMap = (map<String, Object>) JSON.deserializeUntyped(res.getBody());
             System.debug('result--> '+responseMap.get('result'));
         }
-        return (Double)responseMap.get('result');
+        return (Double)responseMap.('result');
     }
     
     @AuraEnabled(cacheable=true)
@@ -29,7 +29,7 @@ public class currencyConverterController
     {
         
         Http http = new Http();
-        HttpRequest req = new HttpRequest();
+        HttpRequest req =  HttpRequest();
         req.setEndpoint('https://api.exchangerate.host/symbols');
         req.setMethod('GET');
         HttpResponse res = http.send(req);
@@ -40,10 +40,10 @@ public class currencyConverterController
         }
         else
         {
-            responseMap = (map<String, Object>) JSON.deserializeUntyped(res.getBody());
+            responseMap = (map<String, Object>) JSON.deserializeUntyped(res.getBody())
         }
         map<String, Object> symbolMap = (map<String, Object>)(responseMap.get('symbols'));
         System.debug('symbolMap--> '+symbolMap);	
-        return symbolMap;
+         symbolMap;
     }
 }
