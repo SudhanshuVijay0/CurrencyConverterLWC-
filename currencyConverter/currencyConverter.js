@@ -1,4 +1,4 @@
-import { LightningElement, track } from 'lwc';
+import { LightningElement, track, wire } from 'lwc';
 import getconversion from '@salesforce/apex/currencyConverterController.getConversion';
 import getCodes from '@salesforce/apex/currencyConverterController.getCodes';
 export default class CurrencyConverter extends LightningElement 
