@@ -3,7 +3,7 @@ import getconversion from '@salesforce/apex/currencyConverterController.getConve
 import getCodes from '@salesforce/apex/currencyConverterController.getCodes';
 export default class CurrencyConverter extends LightningElement 
 {
-    track convertFrom='';
+    @track convertFrom='';
     @track convertTo='';
     @track amount='';
     @track result='';
