@@ -44,6 +44,6 @@ public class currencyConverterController
         }
         map<String, Object> symbolMap = (map<String, Object>)(responseMap.get('symbols'));
         System.debug('symbolMap--> '+symbolMap);	
-         symbolMap;
+        return symbolMap;
     }
 }
