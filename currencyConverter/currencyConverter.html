@@ -6,7 +6,7 @@
             <lightning-input type="text" value={amount} variant="standard" name="amount" label="Amount" onchange={handleAmountChange} placeholder="Enter amount to be converted"></lightning-input>
             <div class="slds-m-top_medium slds-align--absolute-center">
                 <lightning-button class="slds-m-right--small" variant="success" label="Convert" title="convert" onclick={handleClick}><lightning-button>
-                <lightning-button class="slds-m-left--small" variant="destructive" label="Clear" title="clear" onclick={handleClear}><lightning-button>
+                <lightning-button class="slds-m-left--small" variant="destructive" label="Clear" title="clear" onclick={handleClear}></lightning-button>
             </div>
         </div>
         <p style="font-weight: bold; font-size: large;" slot="footer">Result --> {result}<p>
