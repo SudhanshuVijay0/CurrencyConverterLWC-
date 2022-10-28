@@ -1,7 +1,7 @@
 public class currencyConverterController 
 {
 	@AuraEnabled(cacheable=true)//missing cacheable as to save runtime its required
-    public double getConversion(String amount, String convertFrom, String convertTo)
+    public static double getConversion(String amount, String convertFrom, String convertTo)
     {
         
         Http http = new Http()
